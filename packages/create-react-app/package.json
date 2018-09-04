@@ -5,13 +5,13 @@
     "react"
   ],
   "description": "Create React apps with no build configuration.",
-  "repository": "facebookincubator/create-react-app",
+  "repository": "entryone/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=4"
   },
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/entryone/create-react-app/issues"
   },
   "files": [
     "index.js",

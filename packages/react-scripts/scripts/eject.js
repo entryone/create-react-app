@@ -239,15 +239,15 @@ inquirer
       // TODO: this is disabled for three reasons.
       //
       // 1. It produces garbage warnings on Windows on some systems:
-      //    https://github.com/facebookincubator/create-react-app/issues/2030
+      //    https://github.com/entryone/create-react-app/issues/2030
       //
       // 2. For the above reason, it breaks Windows CI:
-      //    https://github.com/facebookincubator/create-react-app/issues/2624
+      //    https://github.com/entryone/create-react-app/issues/2624
       //
       // 3. It is wrong anyway: re-running yarn will respect the lockfile
       //    rather than package.json we just updated. Instead we should have
       //    updated the lockfile. So we might as well not do it while it's broken.
-      //    https://github.com/facebookincubator/create-react-app/issues/2627
+      //    https://github.com/entryone/create-react-app/issues/2627
       //
       // console.log(cyan('Running yarn...'));
       // spawnSync('yarnpkg', [], { stdio: 'inherit' });

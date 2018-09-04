@@ -57,7 +57,7 @@ module.exports = function create(env) {
     // currently not enabled in babel-preset-react. See the below threads for more info:
     // https://github.com/babel/babel/issues/4702
     // https://github.com/babel/babel/pull/3540#issuecomment-228673661
-    // https://github.com/facebookincubator/create-react-app/issues/989
+    // https://github.com/entryone/create-react-app/issues/989
     plugins.push.apply(plugins, [
       // Adds component stack to warning messages
       require.resolve('babel-plugin-transform-react-jsx-source'),
@@ -125,7 +125,7 @@ module.exports = function create(env) {
 
     if (env === 'production') {
       // Optimization: hoist JSX that never changes out of render()
-      // Disabled because of issues: https://github.com/facebookincubator/create-react-app/issues/553
+      // Disabled because of issues: https://github.com/entryone/create-react-app/issues/553
       // TODO: Enable again when these issues are resolved.
       // plugins.push.apply(plugins, [
       //   require.resolve('babel-plugin-transform-react-constant-elements')
