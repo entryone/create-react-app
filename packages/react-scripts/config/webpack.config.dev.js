@@ -113,6 +113,7 @@ module.exports = {
       // Make sure your source files are compiled, as they will not be processed in any way.
       new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
     ],
+    symlinks: false
   },
   module: {
     strictExportPresence: true,
@@ -142,7 +143,7 @@ module.exports = {
             loader: require.resolve('eslint-loader'),
           },
         ],
-        include: paths.appSrc,
+        include: [paths.appSrc, /node_modules\/@dt\/.+/]
       },
       {
         // "oneOf" will traverse all following loaders until one will
@@ -163,7 +164,7 @@ module.exports = {
           // Process JS with Babel.
           {
             test: /\.(js|jsx|mjs)$/,
-            include: paths.appSrc,
+            include: [paths.appSrc, /node_modules\/@dt\/.+/],
             loader: require.resolve('babel-loader'),
             options: {
               // @remove-on-eject-begin
