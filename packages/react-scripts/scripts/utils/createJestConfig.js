@@ -42,6 +42,7 @@ module.exports = (resolve, rootDir, isEjecting) => {
     transformIgnorePatterns: ["node_modules/(?!(@dt)/)"],
     moduleNameMapper: {
       '^react-native$': 'react-native-web',
+      "\\.(css|less)$": "identity-obj-proxy"
     },
     moduleFileExtensions: [
       'web.js',
