@@ -504,6 +504,9 @@ module.exports = function(webpackEnv) {
               test: cssRegex,
               exclude: cssModuleRegex,
               use: getStyleLoaders({
+                modules: {
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
+                },
                 importLoaders: 1,
                 sourceMap: isEnvProduction && shouldUseSourceMap,
               }),
@@ -522,6 +525,7 @@ module.exports = function(webpackEnv) {
                 sourceMap: isEnvProduction && shouldUseSourceMap,
                 modules: {
                   getLocalIdent: getCSSModuleLocalIdent,
+                  localIdentName: '[name]__[local]___[hash:base64:5]'
                 },
               }),
             },
@@ -533,6 +537,9 @@ module.exports = function(webpackEnv) {
               exclude: sassModuleRegex,
               use: getStyleLoaders(
                 {
+                  modules: {
+                    localIdentName: '[name]__[local]___[hash:base64:5]',
+                  },
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                 },
@@ -554,6 +561,8 @@ module.exports = function(webpackEnv) {
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: {
                     getLocalIdent: getCSSModuleLocalIdent,
+                    localIdentName: '[name]__[local]___[hash:base64:5]',
+
                   },
                 },
                 'sass-loader'
